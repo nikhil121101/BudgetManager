@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Simple Budget Tracker</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="earnings">Earnings</string>
+    <string name="spendings">Spending\'s</string>
+    <string name="netflow">Netflow</string>
+    <string name="_0">0</string>
+    <string-array name="cur_day_week_month">
+        <item>Today</item>
+        <item>This Week</item>
+        <item>This Month</item>
+        <item>All Time</item>
+    </string-array>
+    <string name="normal_quote">&#128526; We\'re good!!</string>
+    <string name="overspending_quote">&#129301; Slowdown chap, we\'re over spending</string>
+    <string name="saving_quote">&#128523; Great savings, well done!!</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="select_type">Select Type</string>
+    <string name="amount">Amount</string>
+    <string name="tag">Tag</string>
+    <string name="title">Title</string>
+    <string name="optional">Optional</string>
+    <string name="save">Save</string>
+    <string name="choose_tag">Choose Tag</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_tag">New tag</string>
+    <string name="add">Add</string>
+    <string name="date">Date</string>
+    <string name="no_description">No description</string>
+    <string name="history">History</string>
+
+</resources>

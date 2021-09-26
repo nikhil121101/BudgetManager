@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.budgetmanager.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_createDataFragment"
+            app:destination="@id/createDataFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_displayTokenFragment"
+            app:destination="@id/displayTokenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createDataFragment"
+        android:name="com.example.budgetmanager.ui.createData.CreateDataFragment"
+        android:label="New Detail"
+        tools:layout="@layout/create_data_fragment" >
+        <action
+            android:id="@+id/action_createDataFragment_to_selectTagFragment"
+            app:destination="@id/selectTagFragment"
+            app:popUpTo="@id/createDataFragment" />
+        <argument
+            android:name="currentToken"
+            app:argType="com.example.budgetmanager.database.models.Token"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectTagFragment"
+        android:name="com.example.budgetmanager.ui.createData.SelectTagFragment"
+        android:label="Select Tag"
+        tools:layout="@layout/fragment_select_tag">
+    </fragment>
+
+    <fragment
+        android:id="@+id/displayTokenFragment"
+        android:name="com.example.budgetmanager.ui.displayData.DisplayTokenFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_display_token">
+        <action
+            android:id="@+id/action_displayTokenFragment_to_createDataFragment"
+            app:destination="@id/createDataFragment"
+            app:popUpTo="@id/displayTokenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthlyHistoryFragment"
+        android:name="com.example.budgetmanager.ui.history.MonthlyHistoryFragment"
+        android:label="History"
+        tools:layout="@layout/monthly_history_fragment" >
+        <action
+            android:id="@+id/action_monthlyHistoryFragment_to_specificMonthFragment"
+            app:destination="@id/specificMonthFragment"
+            app:popUpTo="@id/monthlyHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specificMonthFragment"
+        android:name="com.example.budgetmanager.ui.history.specificMonth.SpecificMonthFragment"
+        android:label="fragment_specific_month"
+        tools:layout="@layout/fragment_specific_month" >
+        <action
+            android:id="@+id/action_specificMonthFragment_to_displayTokenFragment"
+            app:destination="@id/displayTokenFragment"
+            app:popUpTo="@id/specificMonthFragment" />
+    </fragment>
+
+</navigation>
